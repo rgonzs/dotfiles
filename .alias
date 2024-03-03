@@ -1,0 +1,6 @@
+#!/bin/bash
+
+if [ -x "$(command -v kubectl)" ]; then
+  alias k="kubectl"
+fi
+
