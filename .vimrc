@@ -1,5 +1,9 @@
+set title
 set nu
+set mouse=
 set incsearch
 set background=dark
-set title
-autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+set shiftwidth=4
+set softtabstop=2
+set expandtab
+set smarttab
