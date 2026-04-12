@@ -107,5 +107,3 @@ kubevm() {
       ;;
   esac
 }
-
-kubevm cache
