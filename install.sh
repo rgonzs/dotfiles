@@ -2,17 +2,14 @@
 
 set -eux
 
-# Link alias files to home directory if not exists
-if [ -L $HOME/alias ]; then 
-  ln -s $HOME/.dotfiles/.alias $HOME/.alias
+if [ ! -x "$(command -v fzf)" ]; then
+  sudo dnf install -y fzf
 fi
 
-# Set user umask to 027 for more privacy
-if ( ! grep -q -E '^umask 027' $HOME/.zshrc ) ; then
-  echo "umask 027" >> $HOME/.zshrc
+if [ ! -x "$(command -v nvim)" ]; then
+  sudo dnf install -y nvim
 fi
 
-if ( ! grep -q -E '^umask 027' $HOME/.bashrc ); then
-  echo "umask 027" >> $HOME/.bashrc
+if [ ! -L $HOME/.config/nvim ]; then 
+  ln -s $HOME/dotfiles/nvim $HOME/.config/
 fi
-
