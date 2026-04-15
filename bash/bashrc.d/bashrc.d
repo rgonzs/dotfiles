@@ -1,0 +1,1 @@
+/home/rgonzs/dotfiles/bash/bashrc.d

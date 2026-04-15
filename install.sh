@@ -13,3 +13,10 @@ fi
 if [ ! -L $HOME/.config/nvim ]; then 
   ln -s $HOME/dotfiles/nvim $HOME/.config/
 fi
+
+rm -rf $HOME/.bashrc
+ln -s $HOME/dotfiles/bash/bashrc $HOME/.bashrc
+ln -s $HOME/dotfiles/bash/bashrc.d $HOME/.bashrc.d
+
+# STARSHIP
+ln -s $HOME/dotfiles/starship/starship.toml $HOME/.config/
