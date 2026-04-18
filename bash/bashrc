@@ -15,6 +15,11 @@ export PATH
 # export SYSTEMD_PAGER=
 export EDITOR=/usr/bin/vim
 
+# kubectl completion
+if [ -x "$(command -v kubectl)" ]; then
+    . <(kubectl completion bash)
+fi
+
 # User specific aliases and functions
 if [ -d ~/.bashrc.d ]; then
     for rc in ~/.bashrc.d/*; do
@@ -24,6 +29,7 @@ if [ -d ~/.bashrc.d ]; then
     done
 fi
 unset rc
+
 
 # fzf
 eval "$(fzf --bash)"
