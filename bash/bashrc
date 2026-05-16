@@ -35,5 +35,3 @@ unset rc
 eval "$(fzf --bash)"
 # starship
 eval "$(starship init bash)"
-# disable case sensitive
-set completion-ignore-case On
